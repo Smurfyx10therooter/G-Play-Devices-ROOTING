@@ -78,5 +78,44 @@ The device will most likely reboot, and come up with a warning symbol. Click the
 Congrats! The bootloader is unlocked!
 
 3. ROOTING!!!
-Finally, we can ROOT the phone. Download Software Fix (https://download.lenovo.com/consumer/mobiles/software_fix_v7.4.2.13_setup.exe). This lets us download files for Magisk, is made by Motorola, and lets us flash Magisk 😎
+Finally, we can ROOT the phone. Download Software Fix (https://download.lenovo.com/consumer/mobiles/software_fix_v7.4.2.13_setup.exe). This lets us download files for Magisk, is made by Motorola, and lets us restore/rescue our phone if we fail.
+After you re-setup your phone, we need to connect to the internet, so we can sideload Magisk.
+Download the Magisk-v27.0.apk from the XDA post on to your PC and store it in the OG folder that you downloaded in or somewhere safe.
+Assuming that you already re-setup the phone, go back into Settings and renable Developer Settings. If you dont remember how to: Go to About phone (in Settings)
+Scroll down until "Build number" comes in on your ready-to-root vison.
+Click it 7 times til' your fingers burn you.
+If prompted, enter your screen lock/password.
+Go back into the main settings menu.
+Find Developer Settings. If you cant find it anywhere, search it!
+Go to the Developer Setting menu and scroll until you see USB Debugging.
+Turn it on.
+DO NOT turn on OEM unlocking as we already did that.
+When you accept the prompt to allow the PC, we need to go back to the folder on the PC that you stored the Magisk-v27.0.apk in, right click on Magisk-v27.0.apk, and copy it.
+Now, back in the terminal, paste this command: adb install (PASTE HERE)
+Replace (PASTE HERE) with the file you copied from your folder!
+It will do some things, so wait, and wait until it is done. If it works, find the Magisk app on your phone.
+It may ask you to update, BUT DO NOT as it will break Magisk.
+Now close Magisk, and when you downloaded Software Fix, open the setup .exe from when you downloaded Software Fix!
+Go through the setup, and then open Software Fix, and sign in through the app.
+After you do, run this command in the terminal/cmd for your phone: adb reboot bootloader
+Your phone will go to the same Android screen where he is getting fixed.
+Software Fix should see the device and go to the Rescue menu.
+Download the .zip file for your phone's software that it downloads, and when it is done, CLOSE SOFTWARE FIX.
+If you don't, it will reflash your phone.
+Once you close it, go back to files and go to This PC, then Windows (C:).
+On the top bar, go to View > Show > Hidden items
+A few files with a darker folder icon will apear.
+Click on the ProgramData folder.
+DO NOT DELETE ANYTHING IN THIS FOLDER, THIS HOLDS ALL YOUR PC'S APPS
+Find the RSA folder inside the ProgramData folder.
+Go inside the Download folder (inside RSA)
+Go to RomFiles.
+Click on one of the folders inside (it should be something like PHONENAME_G_123456.100_5_5_5_5_subsidy_CARRIER_CARRIER_regulatory_DEFAULT_numbers_CFC, it will be different for your phone)
+Inside the folder, find init_boot.img
+Copy the init_boot.img file, and then run this in the terminal with the phone plugged in: adb push /sdcard/Download FILES OH SO GREAT (replace FILES OH SO GREAT with the init_boot.img you just copied)
+This will push the file to your phone.
+Find the Install button. Click on Select and patch a file
+A files window will appear, find the init_boot.img in your Downloads folder, and click on it.
+Magisk will patch it, and it will save to your Downloads folder again. It will be a file like Magisk12345patched.img or something-
+
 
